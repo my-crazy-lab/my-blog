@@ -2,17 +2,258 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light theme */
+:root {
+  --tw-prose-body: #faf3e0;  /* Light Ivory (A soft, creamy off-white for text, easy on the eyes) */
+  --tw-prose-headings: #ff6f61;  /* Coral Red (Rich warm coral for headings, gives warmth without being too harsh) */
+  --tw-prose-links: #0077cc;  /* Deep Sky Blue (Vibrant blue for links, eye-catching but not overwhelming) */
+  --tw-prose-bold: #f9c846;  /* Golden Yellow (A warm golden color for bold text, adds richness) */
+  --tw-prose-counters: #d6a25e;  /* Warm Caramel (For list counters, it gives a soft, inviting tone) */
+  --tw-prose-bullets: #b89060;  /* Brown Sugar (A warm, inviting color for bullet points) */
+  --tw-prose-hr: #d1bfa7;  /* Soft Champagne (A gentle, light champagne color for horizontal rules) */
+  --tw-prose-quotes: #4e4d5f;  /* Smoky Lavender (For blockquotes, giving a soft, thoughtful vibe) */
+  --tw-prose-quote-borders: #ff6f61;  /* Coral Red (Matching the heading color, for consistency) */
+  --tw-prose-captions: #9a8e7e;  /* Sage Green (A calm and subtle color for captions, grounding the text) */
+  --tw-prose-code: #9b8c5b;  /* Warm Olive (For inline code, providing a soft contrast without clashing) */
+  --tw-prose-pre-code: #f0e6c9;  /* Light Sandy Beige (For preformatted code, light yet distinct against a dark background) */
+  --tw-prose-pre-bg: #faf3e0;  /* Light Ivory (Matches body text, creates a consistent feel) */
+  --tw-prose-th-borders: #ffad60;  /* Peachy Orange (For table header borders, creating a soft contrast) */
+  --tw-prose-td-borders: #e0c48f;  /* Caramel Beige (For table data borders, gives a natural feel) */
+  --tw-prose-paragraph: #5a4f5e;  /* Smoky Purple (Rich enough for paragraphs, not too dark) */
+  --tw-prose-span: #5a4f5e;  /* Smoky Purple (Matching span text color, for consistency) */
+  --tw-prose-li: #5a4f5e;  /* Smoky Purple (A rich color for list items, complements paragraphs) */
+}
+
+/* Dark theme */
+.dark {
+  --tw-prose-body: #2c2a34;  /* Charcoal Black (Deep, moody background for text) */
+  --tw-prose-headings: #ff7b54;  /* Warm Coral (For headings, adds warmth and vibrancy) */
+  --tw-prose-links: #00b0ff;  /* Bright Electric Blue (Vivid, contrasts nicely against dark background) */
+  --tw-prose-bold: #ffac33;  /* Rich Amber (A deep amber for bold text, warm but not overpowering) */
+  --tw-prose-counters: #f4a261;  /* Soft Orange (For list counters, a muted, soft orange) */
+  --tw-prose-bullets: #d17a43;  /* Rustic Brown (A warm, earthy tone for bullet points) */
+  --tw-prose-hr: #7a5c53;  /* Dark Brown (For horizontal rules, blends well with the dark background) */
+  --tw-prose-quotes: #8e7e74;  /* Muted Taupe (For blockquotes, creating a soft, neutral tone) */
+  --tw-prose-quote-borders: #ff7b54;  /* Warm Coral (Matching the heading color, for consistency) */
+  --tw-prose-captions: #7f6e5f;  /* Muted Olive (A calm olive tone for captions, grounding the text) */
+  --tw-prose-code: #f0d0a4;  /* Pale Honey Yellow (A warm honey color for inline code, adds vibrancy without harsh contrast) */
+  --tw-prose-pre-code: #e6c39e;  /* Light Coffee Cream (For preformatted code, making it legible but soft against dark background) */
+  --tw-prose-pre-bg: #2c2a34;  /* Charcoal Black (Matches the dark background of the theme) */
+  --tw-prose-th-borders: #ffad60;  /* Peachy Orange (For table header borders, creating a soft contrast) */
+  --tw-prose-td-borders: #b29d7f;  /* Mocha Brown (For table data borders, gives a natural feel) */
+  --tw-prose-paragraph: #f1f1f1;  /* Light Ivory (For paragraphs in dark mode, to avoid heavy contrast) */
+  --tw-prose-span: #f1f1f1;  /* Light Ivory (For spans, consistent with paragraph color) */
+  --tw-prose-li: #f1f1f1;  /* Light Ivory (For list items, easy to read and consistent) */
+}
+
+/* Customize base text styles */
 body {
   @apply font-sans;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff; /* You can change the body background color if needed */
+  color: #333; /* Default text color */
 }
 
+/* Default colors for HTML tags */
+
+/* <p> tag */
+p {
+  color: var(--tw-prose-paragraph); /* Default color for paragraph text */
+  margin-bottom: 1rem;
+}
+
+/* <span> tag */
+span {
+  color: var(--tw-prose-span); /* Default color for inline text */
+}
+
+/* <li> tag */
+li {
+  color: var(--tw-prose-li); /* Default color for list items */
+  margin-bottom: 0.5rem;
+}
+
+/* <a> links style */
+a {
+  color: var(--tw-prose-links); /* Default color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Heading tags (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--tw-prose-headings); /* Default color for headings */
+}
+
+/* <hr> (Horizontal Rule) */
+hr {
+  border-top: 1px solid var(--tw-prose-hr);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Blockquote styling */
+blockquote {
+  color: var(--tw-prose-quotes);
+  border-left: 4px solid var(--tw-prose-quote-borders);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--tw-prose-pre-bg);
+  color: var(--tw-prose-pre-code);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* <code> inline code styling */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: var(--tw-prose-code);
+  font-family: monospace;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--tw-prose-th);
+  color: var(--tw-prose-headings);
+  padding: 0.5rem;
+  border: 1px solid var(--tw-prose-th-borders);
+}
+
+td {
+  padding: 0.5rem;
+  border: 1px solid var(--tw-prose-td-borders);
+  color: var(--tw-prose-body);
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Optional: Customize the appearance of ordered and unordered lists */
+ul, ol {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  color: var(--tw-prose-li);
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+
+  blockquote {
+    @apply border-l-4 p-4 my-4 rounded-md;
+  }
+
+  /* Blockquote custom colors based on theme */
+  blockquote.success, blockquote.error, blockquote.warning, blockquote.info {
+    @apply border-l-4 p-4 rounded-md;
+    background-color: var(--tw-prose-pre-bg);
+    color: var(--tw-prose-body);
+  }
+
+  blockquote.success {
+    border-color: #4ade80; /* green */
+  }
+
+  blockquote.error {
+    border-color: #f87171; /* red */
+  }
+
+  blockquote.warning {
+    border-color: #facc15; /* yellow */
+  }
+
+  blockquote.info {
+    border-color: #60a5fa; /* blue */
+  }
+
+  /* Code block styles */
+  pre {
+    @apply p-4 rounded-lg overflow-x-auto text-sm my-4;
+    background-color: var(--tw-prose-pre-bg);
+    color: var(--tw-prose-pre-code);
+  }
+
+  pre code {
+    @apply text-sm;
+  }
+
+  /* Optional: Highlight.js styles */
+  .hljs {
+    @apply text-sm leading-relaxed;
+  }
+
+  .hljs-keyword {
+    @apply text-purple-400 font-semibold;
+  }
+
+  .hljs-number {
+    @apply text-amber-300;
+  }
+
+  .hljs-string {
+    @apply text-green-400;
+  }
+
+  .hljs-comment {
+    @apply text-zinc-500 italic;
+  }
+
+  .hljs-title {
+    @apply text-cyan-400;
+  }
 }
