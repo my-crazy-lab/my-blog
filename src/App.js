@@ -98,6 +98,12 @@ const Posts = () => (
         </Link>
         <p className="text-sm text-gray-400">#Database #Indexing #Storage</p>
       </li>
+      <li>
+        <Link to="/posts/learning_domain_driven_design" className="text-lg font-medium underline">
+        Learning Domain-driven design
+        </Link>
+        <p className="text-sm text-gray-400">#Database #Indexing #Storage</p>
+      </li>
     </ul>
   </Page>
 );
