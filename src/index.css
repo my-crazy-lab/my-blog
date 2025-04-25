@@ -143,11 +143,7 @@ th {
 td {
   padding: 0.5rem;
   border: 1px solid var(--tw-prose-td-borders);
-  color: var(--tw-prose-body);
-}
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  color: var(--tw-prose-li);
 }
 
 /* Optional: Customize the appearance of ordered and unordered lists */

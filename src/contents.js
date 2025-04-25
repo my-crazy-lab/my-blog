@@ -587,7 +587,7 @@ const learning_domain_driven_design = `
 </ul>
 </li>
 </ul>
-<h3 id="event-carried-state-transfer-ecst-">Event-Carried State Transfer (ECST)</h3>
+<h3 id="event-carried-state-transfer-ecst">Event-Carried State Transfer (ECST)</h3>
 <ul>
 <li>Carries full data needed for consumer to act.</li>
 <li>Async data sync between producer/consumer.</li>
